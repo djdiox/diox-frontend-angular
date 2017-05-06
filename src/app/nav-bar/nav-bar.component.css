@@ -9,7 +9,9 @@ body {
     z-index: 12;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-image: url('../../assets/rave.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -17,9 +19,9 @@ body {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 3px 8px 3px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 65px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -176,7 +178,6 @@ li .active {
     background-color: deepskyblue;
     position: relative;
     top: -4px;
-    left: 6px;
     border: 1px solid white;
 }
 
