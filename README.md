@@ -2,9 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
+Should be sooner or later published on this GitHub [Page](https://devilzripper.github.io/diox-frontend-angular/).
+
 As a private testing project, this contains a number of features that are unusual.
 
 Creating The Code Base / Need Design!
+
+V0.0.0.1
+
+Already done is the navbar.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
