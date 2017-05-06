@@ -1,11 +1,13 @@
 <app-nav-bar></app-nav-bar>
 <h1>
-  {{configService.title}}
+    {{configService.title}}
 </h1>
 <div class="content">
-<app-home-page *ngIf="configService.currentView == 'home'"></app-home-page>
-<app-about *ngIf="configService.currentView == 'about'"></app-about>
-<app-biography *ngIf="configService.currentView == 'biography'"></app-biography>
-<app-music *ngIf="configService.currentView == 'music'"></app-music>
-<app-contact *ngIf="configService.currentView == 'contact'"></app-contact>
+    <app-home-page *ngIf="configService.currentView == 'home'"></app-home-page>
+    <app-about *ngIf="configService.currentView == 'about'"></app-about>
+    <app-biography *ngIf="configService.currentView == 'biography'"></app-biography>
+    <app-music *ngIf="configService.currentView == 'music'"></app-music>
+    <app-contact *ngIf="configService.currentView == 'contact'"></app-contact>
+    <app-settings *ngIf="configService.currentView == 'settings'"></app-settings>
 </div>
+<app-foot-bar></app-foot-bar>

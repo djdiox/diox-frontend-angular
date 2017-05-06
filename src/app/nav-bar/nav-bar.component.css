@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    text-align:center;
+    text-align: center;
 }
 
 .sidenav a {
@@ -23,10 +23,9 @@ body {
     color: #818181;
     display: block;
     transition: 0.3s;
-
 }
 
-.sidenav a:hover{
+.sidenav a:hover {
     color: #f1f1f1;
 }
 
@@ -39,6 +38,168 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+#normal-nav {
+    width: 98%;
+    display: inline-block;
+}
+
+#navToggle {
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.simple-nav {
+    width: 96%;
+    position: fixed;
+    top: -39px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0.7;
+    background-color: #111;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    border-radius: 5px;
+}
+
+.hovered-nav {
+    transform: translate(0, 39px);
+}
+
+.nav-icon {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    margin-right: 7px;
+    width: 12px;
+}
+
+
+/*
+.arrow-down {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 20px solid #111;
+    margin: 0 auto;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.arrow-up {
+    position: fixed;
+    top: 49px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 20px solid #333;
+    margin: 0 auto;
+    transition: all 0.6s ease-out;
+}*/
+
+i {
+    position: fixed;
+    top: 9px;
+    right: 39px;
+    border: solid black;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 12px;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.up {
+    top: 74px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow-container {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    position: fixed;
+    top: 2px;
+    right: 1.4%;
+    border: 1px solid blue;
+    background: bisque;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.arrow-down {
+    /*right: 0%;*/
+    top: 58px
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.hovered-arrow {
+    transform: translate(0, 100px);
+    opacity: 0;
+    border-top-color: deepskyblue;
+}
+
+li {
+    float: left;
+}
+
+.right-panel {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li .nav-item:hover,
+.nav-icon:hover {
+    background-color: white;
+    background-color: deepskyblue
+}
+
+li .active {
+    background-color: deepskyblue;
+}
+
+.item-active {
+    position: relative;
+    top: 10px;
 }

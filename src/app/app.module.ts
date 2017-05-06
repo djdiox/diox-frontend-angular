@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { MusicComponent } from './music/music.component';
 import { BiographyComponent } from './biography/biography.component';
 import { ContactComponent } from './contact/contact.component';
+import { FootBarComponent } from './foot-bar/foot-bar.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     MusicComponent,
     BiographyComponent,
-    ContactComponent
+    ContactComponent,
+    FootBarComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
