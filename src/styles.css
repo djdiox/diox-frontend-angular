@@ -1,6 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-     font-family: 'PT Sans Narrow', sans-serif;
-     font-size:14pt;
-     margin-top:0;
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14pt;
+    margin-top: 0;
+    background-image: url('./assets/Background-Main.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+html {}
+
+.loader {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }

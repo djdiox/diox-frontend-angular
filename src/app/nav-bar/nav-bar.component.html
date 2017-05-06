@@ -1,27 +1,30 @@
-<a id="navToggle" (click)="openNav()"><span style="font-size:30px;cursor:pointer">&#9776;</span></a>
+<a id="navToggle" (click)="openNav()"><span style="font-size:30px;cursor:pointer;color:white;position:fixed;">&#9776;</span></a>
 <div id="normal-nav">
-    <ul class="simple-nav" [class.hovered-nav]="didHover" (click)="didHover = !didHover">
-        <li><a class="nav-item" href="#" [class.active]="configService.currentView == 'home'" (click)="setView('home')">&#8962;</a></li>
-        <li><a class="nav-item" href="#" [class.active]="configService.currentView == 'about'" (click)="setView('about')">About</a></li>
-        <li><a class="nav-item" href="#" [class.active]="configService.currentView == 'music'" (click)="setView('music')">Music</a></li>
-        <li><a class="nav-item" href="#" [class.active]="configService.currentView == 'biography'" (click)="setView('biography')">Biography</a></li>
-        <li><a class="nav-item" href="#" [class.active]="configService.currentView == 'contact'" (click)="setView('contact')">Contact</a></li>
-        <li class="right-panel">
-            <a style="background-image:url('../assets/settings.svg');background-repeat: no-repeat;background-size: cover;" href="#" class="nav-icon" [class.active]="configService.currentView == 'settings'" (click)="setView('settings')">
-            </a>
+    <ul class="simple-nav" [class.hovered-nav]="didHover">
+        <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'home'" (click)="setView('home')">&#8962;</a></li>
+        <div class="menu-points">
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'about'" (click)="setView('about')">About</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'music'" (click)="setView('music')">Music</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'stream'" (click)="setView('stream')">Livestreams</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'photos'" (click)="setView('photos')">Photography</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'biography'" (click)="setView('biography')">Biography</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'contact'" (click)="setView('contact')">Contact</a></li>
+            <li [class.hovered]="didHover"><a class="nav-item" href="#" [class.active]="configService.currentView == 'code'" (click)="setView('code')">Coding</a></li>
+        </div>
+        <li class="right-panel" (click)="didHover = !didHover">
+            <i class="arrow up" [class.hovered-arrow]="!didHover"></i>
+            <i class="arrow down" [class.hovered-arrow]="didHover"></i>
         </li>
     </ul>
-
-    <div class="arrow-container" (click)="didHover = true" [class.arrow-down]="didHover">
-    </div>
-    <i class="arrow up" (click)="didHover = false" [class.hovered-arrow]="!didHover" ng-if=""></i>
-    <i class="arrow down" (click)="didHover = true" [class.hovered-arrow]="didHover"></i>
 </div>
 <div id="mySidenav" class="sidenav" [style.width]="{'width': navWidth}">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
     <a href="#" (click)="setView('home')" style="font-size: 40pt">&#8962;</a>
-    <a href="#" (click)="setView('about')">About</a>
-    <a href="#" (click)="setView('music')">Music</a>
-    <a href="#" (click)="setView('biography')">Biography</a>
-    <a href="#" (click)="setView('contact')">Contact</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'about'" (click)="setView('about')">About</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'music'" (click)="setView('music')">Music</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'stream'" (click)="setView('stream')">Streams</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'photos'" (click)="setView('photos')">Photography</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'biography'" (click)="setView('biography')">Biography</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'contact'" (click)="setView('contact')">Contact</a>
+    <a class="nav-item" href="#" [class.active]="configService.currentView == 'code'" (click)="setView('code')">Coding</a>
 </div>
