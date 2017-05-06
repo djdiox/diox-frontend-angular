@@ -1,0 +1,9 @@
+<div id="mySidenav" class="sidenav"  [style.width]="{'width': navWidth}">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="#" (click)="setView('home')" style="font-size: 40pt">&#8962;</a>
+  <a href="#" (click)="setView('about')">About</a>
+  <a href="#" (click)="setView('music')">Music</a>
+  <a href="#" (click)="setView('biography')">Biography</a>
+  <a href="#" (click)="setView('contact')">Contact</a>
+</div>
+<a (click)="openNav()"><span style="font-size:30px;cursor:pointer">&#9776; open</span></a>
