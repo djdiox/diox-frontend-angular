@@ -6,10 +6,12 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 12;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-image: url('../../assets/rave.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -17,9 +19,9 @@ body {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 3px 8px 3px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 65px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -58,15 +60,16 @@ body {
 }
 
 .simple-nav {
-    width: 96%;
+    width: 80.3%;
     position: fixed;
-    top: -39px;
+    top: -45px;
     list-style-type: none;
-    margin: 0;
+    margin-left: 9%;
     padding: 0;
-    overflow: hidden;
-    opacity: 0.7;
-    background-color: #111;
+    overflow: visible;
+    opacity: 0.8;
+    z-index: 3;
+    background-color: forestgreen;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
@@ -75,8 +78,13 @@ body {
     border-radius: 5px;
 }
 
+.hovered {
+    top: 0px;
+}
+
 .hovered-nav {
     transform: translate(0, 39px);
+    top: -57px;
 }
 
 .nav-icon {
@@ -87,78 +95,38 @@ body {
     width: 12px;
 }
 
-
-/*
-.arrow-down {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 20px solid #111;
-    margin: 0 auto;
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
+.simple-nav li .active {
+    transform: translate(0, 15px);
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
 }
 
-.arrow-up {
-    position: fixed;
-    top: 49px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 20px solid #333;
-    margin: 0 auto;
-    transition: all 0.6s ease-out;
-}*/
-
 i {
-    position: fixed;
-    top: 9px;
-    right: 39px;
     border: solid black;
     border-width: 0 8px 8px 0;
-    display: inline-block;
     padding: 12px;
+    z-index: 4;
     -webkit-transition: all 0.6s ease-out;
     -moz-transition: all 0.6s ease-out;
     -ms-transition: all 0.6s ease-out;
     -o-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
+    z-index: 4;
+    float: right;
+}
+
+.arrow-down {
+    /*right: 0%;*/
+    /*top: 58px*/
 }
 
 .up {
     top: 74px;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-}
-
-.arrow-container {
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
-    position: fixed;
-    top: 2px;
-    right: 1.4%;
-    border: 1px solid blue;
-    background: bisque;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-}
-
-.arrow-down {
-    /*right: 0%;*/
-    top: 58px
 }
 
 .down {
@@ -174,6 +142,10 @@ i {
 
 li {
     float: left;
+    position: relative;
+    right: 11px;
+    margin-left: 10px;
+    top: 14px;
 }
 
 .right-panel {
@@ -185,21 +157,52 @@ li a {
     color: white;
     border-radius: 3px;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 26px;
     text-decoration: none;
+}
+
+.home {
+    padding-right: 16%;
 }
 
 li .nav-item:hover,
 .nav-icon:hover {
-    background-color: white;
     background-color: deepskyblue
+}
+
+.menu-points {
+    margin-left: 20%;
 }
 
 li .active {
     background-color: deepskyblue;
+    position: relative;
+    top: -4px;
+    border: 1px solid white;
 }
 
 .item-active {
     position: relative;
     top: 10px;
+}
+
+@media (max-width:768px) {
+    .arrow-container {
+        display: none;
+    }
+    .arrow {
+        display: none;
+    }
+    .simple-nav {
+        display: none;
+    }
+}
+
+@media(min-width:1000px) and (max-width:1280px) {
+    .nav-item {
+        padding: 16px 17px!important;
+    }
+    .menu-points {
+        margin-left: 12%;
+    }
 }

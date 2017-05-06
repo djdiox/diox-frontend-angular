@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Should be sooner or later published on this GitHub [Page](https://devilzripper.github.io/diox-frontend-angular/).
 
+Also available via [00webhost](https://markuswagner93.000webhostapp.com/#)
+
 As a private testing project, this contains a number of features that are unusual.
 
 Creating The Code Base / Need Design!
