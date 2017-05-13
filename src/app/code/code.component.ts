@@ -13,6 +13,8 @@ export class CodeComponent implements OnInit {
     // { data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B' }
   ];
   public chartType:string = 'doughnut';
+  public currentTab:string = 'intro';
+
   constructor() { }
 
   ngOnInit() {

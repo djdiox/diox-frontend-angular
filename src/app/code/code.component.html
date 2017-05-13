@@ -1,22 +1,32 @@
-<h2>Technology is <u>very</u> important, but so is Code and the ideas behind it!</h2>
-<p>
-    In this days, the Generation Y is ruling, we can not afford to loose the connection to the technology, for us self.<br /> The problem is, that those young people do not understand what it means that the internet does never forget!<br /> This is really
-    important and a real problem today already. Everyone want to use the technology but nobody knows what really happens!
-</p>
-<h4>The programming language doesn't matter, it is the way you use it!</h4>
-<p>
-    The goal on programming or other scientific Projects are always to keep it short and simple (KISS, good book, I can recommend it)
-</p>
-<h4>From Microsoft Backend to full stack cross-plattform development</h4>
-<p>Javascript did not only take all client side web credits.. <br />No! Nowadays it is possible to build the whole software (back- and frontend) with the same programming language!<br /> There are also a lot of other features like mongoDb, angular, reactive
-    frameworks, and the king of it all node.js</p>
-<h2>Diagram</h2>
-<p>Change Diagram Type:</p>
-<input type="radio" name="doughnut" [(ngModel)]="chartType" value="doughnut"> Doughnut
-<input type="radio" name="pieChart" [(ngModel)]="chartType" value="pie"> Pie
-<input type="radio" name="radio" [(ngModel)]="chartType" value="bar"> Bar
-<input type="radio" name="polarArea" [(ngModel)]="chartType" value="polarArea"> Polar Area
-<input type="radio" name="line" [(ngModel)]="chartType" value="line"> Line
-<div style="display: block">
+<div class="tab-bar">
+    <div class="tab-item" (click)="currentTab = 'intro'" [ngClass]="{'active-tab': currentTab == 'intro'}">
+        Introduction
+    </div>
+    <div class="tab-item" (click)="currentTab = 'charts'" [ngClass]="{'active-tab': currentTab == 'charts'}">
+        Charts
+    </div>
+</div>
+<div *ngIf="currentTab == 'intro'" class="tab-content">
+    <h2>Technology is <u>very</u> important, but so is Code and the ideas behind it!</h2>
+    <p>
+        In this days, the Generation Y is ruling, we can not afford to loose the connection to the technology, for us self.<br /> The problem is, that those young people do not understand what it means that the internet does never forget!<br /> This is
+        really important and a real problem today already. Everyone want to use the technology but nobody knows what really happens!
+    </p>
+    <h4>The programming language doesn't matter, it is the way you use it!</h4>
+    <p>
+        The goal on programming or other scientific Projects are always to keep it short and simple (KISS, good book, I can recommend it)
+    </p>
+    <h4>From Microsoft Backend to full stack cross-plattform development</h4>
+    <p>Javascript did not only take all client side web credits.. <br />No! Nowadays it is possible to build the whole software (back- and frontend) with the same programming language!<br /> There are also a lot of other features like mongoDb, angular, reactive
+        frameworks, and the king of it all node.js</p>
+</div>
+<div style="display: block" *ngIf="currentTab == 'charts'" class="tab-content">
+    <h2>Diagram</h2>
+    <p>Change Diagram Type:</p>
+    <input type="radio" name="doughnut" [(ngModel)]="chartType" value="doughnut"> Doughnut
+    <input type="radio" name="pieChart" [(ngModel)]="chartType" value="pie"> Pie
+    <input type="radio" name="radio" [(ngModel)]="chartType" value="bar"> Bar
+    <input type="radio" name="polarArea" [(ngModel)]="chartType" value="polarArea"> Polar Area
+    <input type="radio" name="line" [(ngModel)]="chartType" value="line"> Line
     <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="chartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
 </div>

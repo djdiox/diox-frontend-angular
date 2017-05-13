@@ -1,0 +1,101 @@
+.tab-bar {
+    margin-top: 5px;
+}
+
+.tab-item {
+    display: inline;
+    padding: 10px 50px;
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.tab-item:hover,
+.active-tab {
+    background-color: deepskyblue;
+    animation: colorchange 0.2s;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 0.2s;
+    /* Chrome and Safari */
+}
+
+.tab-content {
+    display: block;
+    -webkit-animation: fadeInFromNone 1s ease-out;
+    -moz-animation: fadeInFromNone 1s ease-out;
+    -o-animation: fadeInFromNone 1s ease-out;
+    animation: fadeInFromNone 1s ease-out;
+}
+
+@keyframes colorchange {
+    0% {
+        background: blue;
+    }
+    100% {
+        background: deepskyblue;
+    }
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
