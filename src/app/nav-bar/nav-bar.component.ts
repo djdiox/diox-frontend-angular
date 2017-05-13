@@ -7,7 +7,8 @@ import { ConfigService } from '../services/config.service';
 })
 export class NavBarComponent implements OnInit {
   configService = null;
-
+  navWidth:Number;
+  didHover:Boolean;
   constructor(configService: ConfigService) {
     this.configService = configService;
   }
