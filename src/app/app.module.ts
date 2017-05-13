@@ -30,7 +30,8 @@ const appRoutes: Routes = [
   { path: 'code', component: CodeComponent },
   { path: 'stream', component: StreamComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'home', component: HomePageComponent }
+  { path: 'home', component: HomePageComponent },
+  { path: '**', component: HomePageComponent }
 ];
 
 
