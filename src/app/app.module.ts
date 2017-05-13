@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ChartsModule } from 'ng2-charts';
 
 import { GalleriaModule } from 'primeng/primeng';
 import { AccordionModule } from 'primeng/primeng';
@@ -24,6 +25,7 @@ import { StreamComponent } from './stream/stream.component';
 import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
+  { path: 'about', component: AboutComponent },
   { path: 'music', component: MusicComponent },
   { path: 'biography', component: BiographyComponent },
   { path: 'photos', component: PhotosComponent },
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     GalleriaModule,
     AccordionModule,
     BrowserAnimationsModule,
-    Angular2ImageGalleryModule
+    Angular2ImageGalleryModule,
+    ChartsModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

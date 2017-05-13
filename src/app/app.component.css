@@ -1,9 +1,9 @@
 .content {
     padding: 15px 10px 15px 10px;
-    width: 80%;
+    width: 80vw;
     margin: auto;
     margin-top: 29px;
-    min-height: 1200px;
+    min-height: 90vh;
     background-color: cornflowerblue;
     opacity: 0.8;
     border-radius: 5px;
