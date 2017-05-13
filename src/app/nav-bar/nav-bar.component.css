@@ -39,6 +39,19 @@ body {
     margin-left: 50px;
 }
 
+.avatar {
+    position: fixed;
+    left: 10px;
+    top: 5px;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
@@ -48,19 +61,35 @@ body {
     }
 }
 
+@media screen and (max-height: 700px) {
+    .sidenav a {
+        font-size: 47px;
+    }
+}
+
 #normal-nav {
     width: 98%;
     display: inline-block;
 }
 
 #navToggle {
-    float: left;
+    float: right;
     margin-top: 5px;
-    margin-right: 10px;
+    margin-right: 33px;
+}
+
+.home-button {
+    background-position: center center;
+    margin-left: 15px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+    margin-bottom: 10px;
 }
 
 .simple-nav {
-    width: 80.3%;
+    width: 80.6vw;
     position: fixed;
     top: -45px;
     list-style-type: none;

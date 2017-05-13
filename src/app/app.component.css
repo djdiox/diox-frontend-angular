@@ -5,7 +5,9 @@
     margin-top: 29px;
     min-height: 90vh;
     background-color: cornflowerblue;
+    border: 2px solid gray;
     opacity: 0.8;
+    z-index: 1;
     border-radius: 5px;
 }
 

@@ -1,7 +1,10 @@
+<div class="avatar" style="background-image:url('assets/avatar.jpg')" (click)="openNav()">
+
+</div>
 <a id="navToggle" (click)="openNav()"><span style="font-size:30px;cursor:pointer;color:white;position:fixed;">&#9776;</span></a>
 <div id="normal-nav">
     <ul class="simple-nav" [class.hovered-nav]="didHover">
-        <li [class.hovered]="didHover"><a class="nav-item" href="#" routerLink="/home" routerLinkActive="active">&#8962;</a></li>
+        <!--<li [class.hovered]="didHover"><a class="nav-item" href="#" routerLink="/home" routerLinkActive="active">&#8962;</a></li>-->
         <div class="menu-points">
             <li [class.hovered]="didHover"><a class="nav-item" href="#" routerLink="/about" routerLinkActive="active">About</a></li>
             <li [class.hovered]="didHover"><a class="nav-item" href="#" routerLink="/music" routerLinkActive="active">Music</a></li>
@@ -18,14 +21,11 @@
 </div>
 <div id="mySidenav" class="sidenav" [style.width]="{'width': navWidth}">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a href="#" routerLink="/home" routerLinkActive="active" style="font-size: 40pt" (click)="closeNav()">&#8962;</a>
+    <a href="#" routerLink="/home" routerLinkActive="active" class="home-button" (click)="closeNav()" style="background-image:url('assets/avatar.jpg')"></a>
     <a class="nav-item" href="#" routerLink="/about" routerLinkActive="active" (click)="closeNav()">About</a>
     <a class="nav-item" href="#" routerLink="/music" routerLinkActive="active" (click)="closeNav()">Music</a>
     <a class="nav-item" href="#" routerLink="/photos" routerLinkActive="active" (click)="closeNav()">Photography</a>
     <a class="nav-item" href="#" routerLink="/biography" routerLinkActive="active" (click)="closeNav()">Biography</a>
     <a class="nav-item" href="#" routerLink="/contact" routerLinkActive="active" (click)="closeNav()">Contact</a>
     <a class="nav-item" href="#" routerLink="/code" routerLinkActive="active" (click)="closeNav()">Coding</a>
-
-    <a routerLink="/home" routerLinkActive="active">Crisis Center</a>
-    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
 </div>
