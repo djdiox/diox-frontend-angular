@@ -225,6 +225,9 @@ li .active {
     .simple-nav {
         display: none;
     }
+    .avatar {
+        display: none;
+    }
 }
 
 @media(min-width:1000px) and (max-width:1280px) {
