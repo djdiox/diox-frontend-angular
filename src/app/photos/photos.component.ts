@@ -26,4 +26,7 @@ export class PhotosComponent implements OnInit {
     this.images.push({ source: 'assets/11.jpg', alt: 'Description for Image 11', title: 'Title 11' });
   }
 
+  showInformation($event){
+    console.log($event);
+  }
 }

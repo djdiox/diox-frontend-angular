@@ -206,3 +206,9 @@ li .active {
         margin-left: 12%;
     }
 }
+
+@media(max-width: 1420px) {
+    .simple-nav {
+        display: none!important;
+    }
+}
