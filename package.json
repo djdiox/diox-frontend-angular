@@ -5,11 +5,10 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build --prod --base-href=https://djdiox.github.io/diox-frontend-angular/",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build-github": "ng build --prod --base-href=https://devilzripper.github.io/diox-frontend-angular/",
         "sw": "sw-precache --root=dist --config=sw-precache-config.js"
     },
     "private": true,
