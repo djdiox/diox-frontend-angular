@@ -1,3 +1,23 @@
 <footer>
-  <p>(c) Markus Wagner</p>
+    <p>(c) Markus Wagner</p>
+    <div class="social-container">
+        <div class="social-list" id="socialList" [ngClass]="{'social-list-active': socialVisible}">
+            <a></a>
+            <div id="mixcloud" class="social-icon" [inlineSVG]="'/assets/mixcloud.svg'" (click)="openSocial('https://www.mixcloud.com/diox_dj/')">
+            </div>
+            <div id="soundcloud" class="social-icon" [inlineSVG]="'/assets/soundcloud.svg'" (click)="openSocial('https://soundcloud.com/nerdreflex')">
+            </div>
+            <div id="facebook" class="social-icon" [inlineSVG]="'/assets/facebook.svg'" (click)="openSocial('https://www.facebook.com/diox0/')">
+            </div>
+            <div id="twitter" class="social-icon" [inlineSVG]="'/assets/twitter.svg'" (click)="openSocial('https://twitter.com/markuswagner93')">
+            </div>
+            <div id="instagram" class="social-icon" [inlineSVG]="'/assets/instagram.svg'" (click)="openSocial('https://www.instagram.com/dj.diox/')">
+            </div>
+            <div id="github" class="social-icon" [inlineSVG]="'/assets/github.svg'" (click)="openSocial('https://github.com/djdiox')">
+            </div>
+        </div>
+        <div id="socialToggle " class="social-toggle " [ngClass]="{active: socialVisible} " (click)="toggleSocials($event)" [inlineSVG]=" '/assets/earth.svg' ">
+        </div>
+
+    </div>
 </footer>

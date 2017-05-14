@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts';
+import { InlineSVGModule } from 'ng-inline-svg';
+
 
 import { GalleriaModule } from 'primeng/primeng';
 import { AccordionModule } from 'primeng/primeng';
@@ -23,7 +25,6 @@ import { PhotosComponent } from './photos/photos.component';
 import { CodeComponent } from './code/code.component';
 import { StreamComponent } from './stream/stream.component';
 import { ContactComponent } from './contact/contact.component';
-
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'music', component: MusicComponent },
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     AccordionModule,
     BrowserAnimationsModule,
     Angular2ImageGalleryModule,
-    ChartsModule
+    ChartsModule,
+    InlineSVGModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

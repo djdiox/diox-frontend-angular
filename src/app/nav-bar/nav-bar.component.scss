@@ -100,11 +100,11 @@ body {
     opacity: 0.8;
     z-index: 3;
     background-color: forestgreen;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
     border-radius: 5px;
 }
 
@@ -115,6 +115,12 @@ body {
 .hovered-nav {
     transform: translate(0, 39px);
     top: -57px;
+    background-color: orange;
+    a .active,
+    a:hover,
+    li .active {
+        background-color: mediumaquamarine!important;
+    }
 }
 
 .nav-icon {
@@ -127,11 +133,11 @@ body {
 
 .simple-nav li .active {
     transform: translate(0, 15px);
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -ms-transition: all 0.1s ease-out;
-    -o-transition: all 0.1s ease-out;
-    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 i {
@@ -185,7 +191,7 @@ li {
 li a {
     display: block;
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     text-align: center;
     padding: 12px 26px;
     text-decoration: none;
@@ -197,11 +203,21 @@ li a {
 
 li .nav-item:hover,
 .nav-icon:hover {
-    background-color: deepskyblue
+    background-color: deepskyblue;
+    opacity: 0.9;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .menu-points {
-    margin-left: 20%;
+    margin-left: 26%;
+}
+
+@media screen and(max-width:1700px) {
+    margin-left: 10%;
 }
 
 li .active {
@@ -209,6 +225,10 @@ li .active {
     position: relative;
     top: -4px;
     border: 1px solid white;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.73);
+    -moz-box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.73);
+    box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.73);
+    opacity: 1.2;
 }
 
 .item-active {
@@ -216,7 +236,7 @@ li .active {
     top: 10px;
 }
 
-@media (max-width:768px) {
+@media screen and(max-width:768px) {
     .arrow-container {
         display: none;
     }
@@ -231,7 +251,7 @@ li .active {
     }
 }
 
-@media(min-width:1000px) and (max-width:1280px) {
+@media screen and (min-width:1000px) and (max-width:1280px) {
     .nav-item {
         padding: 16px 17px!important;
     }
@@ -240,7 +260,7 @@ li .active {
     }
 }
 
-@media(max-width: 1420px) {
+@media screen and(max-width: 1420px) {
     .simple-nav {
         display: none!important;
     }

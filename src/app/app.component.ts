@@ -4,7 +4,7 @@ import { ConfigService } from './services/config.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [ConfigService]
 })
 export class AppComponent implements OnInit {
