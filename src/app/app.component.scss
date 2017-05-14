@@ -1,24 +1,30 @@
 .content {
-    padding: 15px 10px 15px 10px;
     width: 80vw;
     margin: auto;
     margin-top: 29px;
     min-height: 90vh;
-    background-color: cornflowerblue;
-    border: 2px solid gray;
-    opacity: 0.8;
     border-radius: 5px;
 }
 
-.mobile-title-only {
-    display: none;
+.content:before {
+    content: "";
+    position: absolute;
+    width: 80vw;
+    margin: auto;
+    min-height: 90vh;
+    background-image: url('../assets/content-background.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.inner-content {
+    padding: 10px;
 }
 
 @media screen and(max-width:1000px) {
-    .mobile-title-only {
-        color: white;
-        display: blocK;
-    }
     .avatar {
         display: none;
     }

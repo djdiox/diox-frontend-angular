@@ -3,7 +3,9 @@
     {{configService.title}}
 </h2>-->
 <div class="content">
-    <router-outlet></router-outlet>
+    <div class="inner-content">
+        <router-outlet></router-outlet>
+    </div>
     <!--<app-home-page *ngIf="configService.currentView == 'home'"></app-home-page>
     <app-about *ngIf="configService.currentView == 'about'"></app-about>
     <app-biography *ngIf="configService.currentView == 'biography'"></app-biography>
