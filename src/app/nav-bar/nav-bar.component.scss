@@ -77,6 +77,9 @@ body {
     margin-top: 5px;
     margin-right: 33px;
     z-index: 10;
+    span {
+        z-index: 10;
+    }
 }
 
 .home-button {

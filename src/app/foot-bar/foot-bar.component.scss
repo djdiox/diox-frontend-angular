@@ -8,7 +8,7 @@
         transform-origin: 0;
         transform: translateY(500px);
         opacity: 0;
-        transition: all 0.2s linear;
+        transition: all 0.2s ease-in;
     }
     .social-list-active {
         position: inherit;
