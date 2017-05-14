@@ -8,14 +8,14 @@
         transform-origin: 0;
         transform: translateY(500px);
         opacity: 0;
-        transition: all 0.2s ease-in;
+        transition: all 0.2s linear;
     }
     .social-list-active {
         position: inherit;
         width: auto;
         opacity: 1;
-        transform: translate(-3px, -344px);
-        transition: all 0.2s ease-out;
+        transform: translate(-3px, -338px);
+        transition: all 0.2s linear;
     }
     .social-toggle {
         width: 50px;
